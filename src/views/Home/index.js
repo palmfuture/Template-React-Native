@@ -4,15 +4,27 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 import {
-    StyleSheet,
     View,
+    Text
 } from 'react-native';
 
-import {
-
-} from '../../components';
+import styles from '../../assets/styles';
 
 class Home extends Component {
+
+    static navigationOptions = ({ navigation }) => {
+        return {
+            headerTitle: <Text style={[styles.fontWeightBold, styles.display5]}>Home</Text>,
+            headerTransparent: false,
+            headerStyle: {
+                borderBottomWidth: 0,
+                marginLeft: 15,
+                marginRight: 15
+            },
+            headerLeft: <Text style={[styles.fontWeightBold, styles.display5]}>Back</Text>,
+            headerRight: <Text style={[styles.fontWeightBold, styles.display5]}>Next</Text>
+        }
+    }
 
     static propTypes = {
         navigation: PropTypes.object.isRequired
@@ -26,21 +38,6 @@ class Home extends Component {
         )
     }
 }
-
-Home.navigationOptions = () => ({
-    title: 'Home',
-    headerTintColor: 'black',
-    headerStyle: {
-        backgroundColor: 'white'
-    }
-});
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'white'
-    }
-});
 
 const mapStateToProps = state => ({
 
