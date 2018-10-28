@@ -14,15 +14,16 @@ class Home extends Component {
 
     static navigationOptions = ({ navigation }) => {
         return {
-            headerTitle: <Text style={[styles.fontWeightBold, styles.display5]}>Home</Text>,
+            headerLeft: <Text style={[styles.fontWeightBold, styles.display5, { paddingLeft: 15 }]}>Back</Text>,
+            headerTitle: <Text style={[styles.fontWeightBold, styles.display5, styles.textCenter, { width: '100%' }]}>Home</Text>,
+            headerRight: <Text style={[styles.fontWeightBold, styles.display5, { paddingRight: 15 }]}>Next</Text>,
             headerTransparent: false,
+            style: {
+                flex: 1,
+            },
             headerStyle: {
                 borderBottomWidth: 0,
-                marginLeft: 15,
-                marginRight: 15
-            },
-            headerLeft: <Text style={[styles.fontWeightBold, styles.display5]}>Back</Text>,
-            headerRight: <Text style={[styles.fontWeightBold, styles.display5]}>Next</Text>
+            }
         }
     }
 
