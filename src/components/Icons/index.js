@@ -24,7 +24,7 @@ class Icons extends Component {
     render() {
         return (
             <View style={{ paddingLeft: 0, paddingRight: 15 }}>
-                <Icon name={this.findIcon()} type='material-community' color='#FF5766' size={32} />
+                <Icon name={this.findIcon()} type='material-community' color='#AAAAAA' size={32} />
             </View>
         )
     }

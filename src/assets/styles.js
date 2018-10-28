@@ -43,16 +43,16 @@ export default styles = StyleSheet.create({
         fontSize: 28
     },
     display5: {
-        fontSize: 16
+        fontSize: 26
     },
     display6: {
-        fontSize: 14
+        fontSize: 20
     },
     display7: {
-        fontSize: 8
+        fontSize: 16
     },
     display8: {
-        fontSize: 4
+        fontSize: 10
     },
     fontStyleItalic: {
         fontStyle: 'italic'
