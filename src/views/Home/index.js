@@ -5,10 +5,12 @@ import React, { Component } from 'react';
 
 import {
     View,
-    Text
+    Text,
+    ImageBackground
 } from 'react-native';
 
 import styles from '../../assets/styles';
+import background from '../../assets/bg2.png';
 
 class Home extends Component {
 
@@ -34,7 +36,12 @@ class Home extends Component {
     render() {
         const { navigation } = this.props;
         return (
-            <View>
+            <View style={[styles.container]}>
+                <ImageBackground
+                    source={background}
+                    style={[styles.backDrop]}
+                >
+                </ImageBackground>
             </View>
         )
     }
