@@ -24,3 +24,7 @@ const nav = (state = initialNavState, action) => {
 }
 
 export default nav;
+
+export function onBackPress() {
+    return { type: Types.BACK_PRESS }
+}

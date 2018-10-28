@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
 import { BackHandler } from 'react-native';
-import { NavigationActions } from 'react-navigation';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { NavigationActions } from 'react-navigation';
+import React, { Component } from 'react';
+
 import { AppNavigator } from './AppNavigator';
+import * as NavActions from '../redux/actions/Navigation';
 
 class ReduxNavigation extends Component {
 
@@ -16,9 +18,9 @@ class ReduxNavigation extends Component {
 	}
 
 	onBackPress = () => {
-		const { dispatch, nav } = this.props;
+		const { nav, onBackPress } = this.props;
 		if (nav.index === 0) return false;
-		dispatch(NavigationActions.back());
+		onBackPress();
 		return true;
 	}
 
@@ -32,7 +34,7 @@ const mapStateToProps = state => ({ nav: state.nav });
 const mapDispatchToProps = dispatch => {
 	return bindActionCreators(
 		{
-			// ACTIONS
+			...NavActions
 		}, dispatch
 	)
 }
