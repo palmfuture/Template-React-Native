@@ -2,12 +2,14 @@ import { combineReducers } from 'redux';
 
 import {
     nav,
-    home
+    home,
+    user
 } from '../actions';
 
 const AppReducer = combineReducers({
     nav,
-    home
+    home,
+    user
 });
 
 export default AppReducer;
